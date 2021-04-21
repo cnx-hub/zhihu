@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>首页 - 知乎</title>
+  <!-- 网址说明 -->
+  <meta name="description"
+    content="知乎，中文互联网最大的问答社区和创作者聚集的原创内容平台，于 2011 年 1 月正式上线，以「让人们更好地分享知识、经验和见解，找到自己的解答」为品牌使命。知乎凭借认真、专业、友善的社区氛围、独特的产品机制以及结构化和易获得的优质内容，聚集了中文互联网科技、商业、影视、时尚、文化等领域最具创造力的人群，已成为综合性、全品类、在诸多领域具有关键影响力的知识分享社区和创作者聚集的原创内容平台，建立起了以社区驱动的内容变现商业模式。" />
+  <!-- 关键字 -->
+  <meta name="keywords" content="任何问题 上知乎 就会有答案" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <!-- 引入基础样式 -->
+  <link rel="stylesheet" href="css/base.css" />
+  <!-- 引入首页样式 -->
+  <link rel="stylesheet" href="css/index.css" />
+  <!-- 引入jq函数 -->
+  <script src="js/jquery.min.js"></script>
+  <!-- 引入index.js文件  -->
+  <script src="js/index.js"></script>
+  <!-- 引入ajax函数 -->
+  <script src="js/ajax.js"></script>
+</head>
+
+<body>
+  <!-- 顶部导航栏模块start  -->
+  <div class="base">
+    <div class="root">
+      <header class="header">
+        <!-- 知乎链接 -->
+        <h1>
+          <a href="index.html">
+            <img src="images/logo1.png" alt="" />
+          </a>
+        </h1>
+
+        <!-- 导航模块 -->
+        <ul class="Tabs_AppHeader_Tabs">
+          <li><a href="javascript:;">首页</a></li>
+          <li><a href="javascript:;">会员</a></li>
+          <li><a href="javascript:;">发现</a></li>
+          <li><a href="javascript:;">等你来答</a></li>
+        </ul>
+
+        <!-- 查询模块 -->
+        <div class="css_1acwmmj">
+          <div class="SearchBar_input">
+            <input type="text" placeholder="情人节要怎么过？" />
+            <button><img src="images/search.png" alt="" /></button>
+          </div>
+          <button class="Button">提问</button>
+        </div>
+
+        <!-- 焦点查询框 -->
+        <div class="SearchBar_input_focus">
+          <input type="text" placeholder="情人节要怎么过？" />
+          <button><img src="images/search.png" alt="" /></button>
+        </div>
+
+        <!-- 用户信息 -->
+        <div class="AppHeader_userInfo">
+          <div class="Popover">
+            <img src="images/dang.png" alt="" />
+          </div>
+          <div class="Popovertwo">
+            <img src="images/message.png" alt="" />
+          </div>
+          <div class="AppHeader_profile">
+            <img src="upload/portrait.png" alt="" />
+            <span class="Menu" style="display: none"></span>
+            <ul class="Menu_item" style="display: none">
+              <li>
+                <img src="upload/portrait.png" alt="" />
+                我的主页
+              </li>
+              <li>
+                <img src="upload/creat .png" alt="" />
+                创作中心
+              </li>
+              <li>
+                <img src="upload/set.png" alt="" />
+                设置
+              </li>
+              <li>
+                <img src="upload/signout.png" alt="" />
+                退出
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- TopstoryPageHeader距离头部模块 -->
+      <div class="TopstoryPageHeader">
+        <!-- 知乎链接 -->
+        <h1>
+          <a href="index.html">
+            <img src="images/logo1.png" alt="" />
+          </a>
+        </h1>
+        <!-- 导航栏模块 -->
+        <nav class="TopstoryTabsfack">
+          <ul>
+            <li>
+              <a href="javascript:;">推荐</a>
+            </li>
+            <li>
+              <a href="javascript:;">关注</a>
+            </li>
+            <li>
+              <a href="javascript:;">热榜</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- 查询模块 -->
+        <div class="css_1acwmmjfack">
+          <div class="SearchBar_inputfack">
+            <input type="text" placeholder="情人节要怎么过？" />
+            <button><img src="images/search.png" alt="" /></button>
+          </div>
+          <button class="Buttonfack">提问</button>
+        </div>
+        <!-- 用户信息 -->
+        <span class="Menufack" style="display: none"></span>
+        <ul class="Menu_itemfack" style="display: none">
+          <li>
+            <img src="upload/portrait.png" alt="" />
+            我的主页
+          </li>
+          <li>
+            <img src="upload/creat .png" alt="" />
+            创作中心
+          </li>
+          <li>
+            <img src="upload/set.png" alt="" />
+            设置
+          </li>
+          <li>
+            <img src="upload/signout.png" alt="" />
+            退出
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- 顶部导航栏模块end    -->
+
+  <!-- 主体内容模块start -->
+  <div class="Topstory_container">
+    <!-- 内容模块start -->
+    <div class="Topstory_mainColumnCard">
+      <nav class="TopstoryTabs">
+        <ul>
+          <li>
+            <a href="javascript:;">推荐</a>
+          </li>
+          <li>
+            <a href="javascript:;">关注</a>
+          </li>
+          <li>
+            <a href="javascript:;">热榜</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="ListShortcut">
+        <!--           <div class="Card_TopstoryItem">
+            <h2 class="ContentItem_title">123123</h2>
+            <div class="RichContent_inner">hhhh</div>
+            <div class="ContentItem_actions">
+              <div class="VoteButton_up">
+                <span class="up"></span>
+                <span>赞同</span>
+              </div>
+              <div class="VoteButton_down">
+                <span class="down"></span>
+              </div>
+              <ul class="button_plan">
+                <li class="comment">
+                  <img src="images/0.png" alt="" class="comment_img" />
+                  <span>评论</span>
+                </li>
+                <li class="comment">
+                  <img src="images/1.png" alt="" class="comment_img" /><span
+                    >分享</span
+                  >
+                </li>
+                <li class="comment">
+                  <img src="images/2.png" alt="" class="comment_img" /><span
+                    >收藏</span
+                  >
+                </li>
+                <li class="comment">
+                  <img src="images/3.png" alt="" class="comment_img" /><span
+                    >举报</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div> -->
+      </div>
+      <!-- 关注模块 -->
+      <div class="Topstory_follow">
+        <div class="Topstory_newUserFollowCountPanel">
+          <img src="images/text.png" alt="" />
+          <div class="Topstory_newUserFollowCountPanelText">还没有人关注</div>
+        </div>
+      </div>
+      <!-- 热榜模块 -->
+      <div class="HotList_list">
+        <div class="HotItem">
+          <div class="HotItem_index">
+            <div class="HotItem_rank">1</div>
+          </div>
+          <h2 class="HotItem_title">123</h2>
+          <p class="HotItem_excerpt">456</p>
+        </div>
+      </div>
+    </div>
+    <!-- 内容模块end -->
+
+    <!-- 知乎功能模块start -->
+    <div class="Card_GlobalWrite">
+      <ul class="GlobalWrite_navTop">
+        <li class="GlobalWrite_topItem">
+          <a href="javascript:;">
+            <img src="images/question.png" alt="" />
+          </a>
+          <div class="GlobalWrite_topTitle">回答问题</div>
+        </li>
+        <li class="GlobalWrite_topItem">
+          <a href="javascript:;">
+            <img src="images/video.png" alt="" />
+          </a>
+          <div class="GlobalWrite_topTitle">发视频</div>
+        </li>
+        <li class="GlobalWrite_topItem">
+          <a href="javascript:;">
+            <img src="images/article.png" alt="" />
+          </a>
+          <div class="GlobalWrite_topTitle">写文章</div>
+        </li>
+        <li class="GlobalWrite_topItem">
+          <a href="javascript:;">
+            <img src="images/idea.png" alt="" />
+          </a>
+          <div class="GlobalWrite_topTitle">写想法</div>
+        </li>
+      </ul>
+      <div class="GlobalWrite_navBottom">
+        <a href="javascript:;" class="GlobalWriteAnswerLater">稍后答</a>
+        <div class="GlobalWrite_navTitle">草稿箱</div>
+      </div>
+    </div>
+    <!-- 知乎功能模块end -->
+
+    <!-- 知乎个人创作模块start -->
+    <div class="Card_CreatorEntrance">
+      <div class="Creator">
+        <img src="upload/portrait.png" alt="" />
+      </div>
+      <div class="CreatorEntrance_text">
+        创作中心
+        <span class="css_3sstln">去开通</span>
+      </div>
+    </div>
+    <!-- 知乎个人创作模块end -->
+
+    <!-- 类别模块start -->
+    <div class="Card_GlobalSideBar_category">
+      <ul class="GlobalSideBar_categoryList">
+        <li class="GlobalSideBar_categoryItem">
+          <img src="images/live.png" alt="" />
+          <span class="GlobalSideBar_categoryLabel">Live</span>
+        </li>
+        <li class="GlobalSideBar_categoryItem">
+          <img src="images/store.png" alt="" />
+          <span class="GlobalSideBar_categoryLabel">书店</span>
+        </li>
+        <li class="GlobalSideBar_categoryItem">
+          <img src="images/desk.png" alt="" />
+          <span class="GlobalSideBar_categoryLabel">圆桌</span>
+        </li>
+        <li class="GlobalSideBar_categoryItem">
+          <img src="images/counlm.png" alt="" />
+          <span class="GlobalSideBar_categoryLabel">专栏</span>
+        </li>
+        <li class="GlobalSideBar_categoryItem">
+          <img src="images/fee.png" alt="" />
+          <span class="GlobalSideBar_categoryLabel">付费咨询</span>
+        </li>
+        <li class="GlobalSideBar_categoryItem">
+          <img src="images/baike.png" alt="" />
+          <span class="GlobalSideBar_categoryLabel">百科</span>
+        </li>
+      </ul>
+    </div>
+    <!-- 类别模块end -->
+
+    <!-- card模块start -->
+    <div class="Card">
+      <ul class="GlobalSideBar_navList">
+        <li class="GlobalSideBar_navItem">
+          <a href="javascript:;">
+            <img src="upload/shoucang.png" alt="" />
+            <span class="GlobalSideBar_navText">我的收藏</span>
+            <span class="GlobalSideBar_navNumber">0</span>
+          </a>
+        </li>
+        <li class="GlobalSideBar_navItem">
+          <a href="javascript:;">
+            <img src="upload/problem.png" alt="" />
+            <span class="GlobalSideBar_navText">我关注的问题</span>
+            <span class="GlobalSideBar_navNumber">0</span>
+          </a>
+        </li>
+        <li class="GlobalSideBar_navItem">
+          <a href="javascript:;">
+            <img src="upload/invitation.png" alt="" />
+            <span class="GlobalSideBar_navText">我的邀请</span>
+            <span class="GlobalSideBar_navNumber">0</span>
+          </a>
+        </li>
+        <li class="GlobalSideBar_navItem">
+          <a href="javascript:;">
+            <img src="upload/balance.png" alt="" />
+            <span class="GlobalSideBar_navText">我的余额</span>
+          </a>
+        </li>
+        <li class="GlobalSideBar_navItem">
+          <a href="javascript:;">
+            <img src="upload/depot.png" alt="" />
+            <span class="GlobalSideBar_navText">站务中心</span>
+          </a>
+        </li>
+        <li class="GlobalSideBar_navItem">
+          <a href="javascript:;">
+            <img src="upload/help.png" alt="" />
+            <span class="GlobalSideBar_navText">帮助中心</span>
+          </a>
+        </li>
+        <li class="GlobalSideBar_navItem">
+          <a href="javascript:;">
+            <img src="upload/copyright.png" alt="" />
+            <span class="GlobalSideBar_navText">版权服务中心</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- card模块end -->
+
+    <!-- 底部模块start -->
+    <div class="footer">
+      <a href="https://liukanshan.zhihu.com" target="_blank" class="Footer_item">刘看山</a>
+      <span class="Footer_dot"></span>
+      <a href="https://www.zhihu.com/question/19581624" class="Footer_item" target="_blank">知乎指南</a>
+      <span class="Footer_dot"></span>
+      <a href="https://www.zhihu.com/term/zhihu-terms" class="Footer_item" target="_blank">知乎协议</a>
+      <span class="Footer_dot"></span>
+      <a href="https://www.zhihu.com/term/privacy" class="Footer_item" target="_blank">知乎隐私保护指引</a>
+
+      <a href="https://www.zhihu.com/app/" class="Footer_item" target="_blank">应用</a>
+      <span class="Footer_dot"></span>
+      <a href="  https://app.mokahr.com/apply/zhihu/3819#/" class="Footer_item" target="_blank">工作</a>
+      <span class="Footer_dot"></span>
+      <button class="OrgCreateButton">
+        <a href="javascript:;" target="_blank">申请开通知乎机构号</a>
+      </button>
+      <br />
+      <a href="https://zhuanlan.zhihu.com/p/28852607" class="Footer_item" target="_blank">侵权举报</a>
+      <span class="Footer_dot"></span>
+      <a href="https://www.12377.cn" class="Footer_item" target="_blank">网上有害信息举报专区</a>
+      <br />
+      <a href="https://tsm.miit.gov.cn/dxxzsp/" class="Footer_item" target="_blank">京 lCP 证 110745 号</a>
+      <br />
+      <a href="" class="Footer_item" target="_blank">
+        <img src="images/jingcha.png" alt="" />
+        京公网安备 11010802020088 号
+      </a>
+      <br />
+      <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020088" class="Footer_item"
+        target="_blank">
+        互联网药品信息服务资格证书
+        <br />
+        （京）- 非经营性 - 2017 - 0067
+      </a>
+      <br />
+      <a href="" class="Footer_item" target="_blank">违法和不良信息举报：010-82716601</a>
+      <br />
+      <a href="https://www.zhihu.com/term/child-jubao" class="Footer_item" target="_blank">儿童色情信息举报专区</a>
+      <br />
+      <a href="https://www.zhihu.com/certificates" class="Footer_item" target="_blank">证照中心</a>
+      <br />
+      <a href="https://www.zhihu.com/contact" class="Footer_item" target="_blank">联系我们</a>
+      <a href="javascript:;" class="Footer_item" target="_blank">© 2021 知乎</a>
+    </div>
+    <!-- 底部模块end -->
+  </div>
+  <!-- 主体内容模块end -->
+</body>
+
+</html>

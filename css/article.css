@@ -1,0 +1,102 @@
+/* body设置 */
+body {
+  background-color: #f6f6f6;
+  height: 3000px;
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?tomleg");
+  src: url("../fonts/icomoon.eot?tomleg#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?tomleg") format("truetype"),
+    url("../fonts/icomoon.woff?tomleg") format("woff"),
+    url("../fonts/icomoon.svg?tomleg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+.root {
+  width: 100%;
+  height: 52px;
+}
+.ColumnPageHeader {
+  position: fixed;
+  height: 52px;
+  width: 100%;
+  background-color: #fff;
+}
+.header {
+  position: absolute;
+  width: 100%;
+  left: 170px;
+  height: 52px;
+  line-height: 52px;
+}
+.header h1 {
+  position: absolute;
+  top: -2px;
+  width: 64px;
+  height: 30px;
+}
+.header h1 a img {
+  width: 100%;
+}
+.header span {
+  position: absolute;
+  top: 12px;
+  left: 73px;
+  height: 30px;
+  width: 1px;
+  background-color: #999;
+}
+.ColumnPageHeader_Title {
+  position: absolute;
+  left: 80px;
+  width: 148px;
+  height: 52px;
+  margin-left: 16px;
+}
+.WriteIndex_pageTitle {
+  color: #121212;
+  font-size: 16px;
+}
+.PublishPanel_wrapper {
+  position: absolute;
+  border: 1px solid grey;
+  top: 10px;
+  left: 800px;
+  padding-left: 10px;
+  line-height: 32px;
+  width: 80px;
+  height: 32px;
+  color: grey;
+  background-color: #fff;
+  font-size: 14px;
+}
+.PublishPanel_wrapper::after {
+  font-family: "icomoon";
+  content: "\e91e";
+  color: grey;
+  margin-left: 10px;
+  font-size: 14px;
+}
+/* 内容标题模块 */
+.WriteIndex_titleInput {
+  width: 660px;
+  height: 44px;
+  margin: 16px auto;
+}
+.WriteIndex_titleInput input {
+  width: 660px;
+  height: 44px;
+  font-size: 20px;
+  color: #121212;
+}
+.DraftEditor_root {
+  width: 660px;
+  margin: 16px auto;
+  border-top: 1px solid #999;
+}
+#textarea {
+  width: 660px;
+  height: 330px;
+}

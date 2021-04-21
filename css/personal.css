@@ -1,0 +1,392 @@
+/* body设置 */
+body {
+  background-color: #f6f6f6;
+  height: 3000px;
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?tomleg");
+  src: url("../fonts/icomoon.eot?tomleg#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?tomleg") format("truetype"),
+    url("../fonts/icomoon.woff?tomleg") format("woff"),
+    url("../fonts/icomoon.svg?tomleg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+/* 顶部导航模块 */
+.base {
+  height: 52px;
+  width: 100%;
+}
+.root {
+  z-index: 999;
+  position: fixed;
+  height: 52px;
+  width: 100%;
+  background-color: #ffffff;
+}
+/* 原始头部模块 */
+.header {
+  /* display: none; */
+  position: absolute;
+  width: 100%;
+  left: 170px;
+  height: 52px;
+  line-height: 52px;
+}
+.header h1 {
+  position: absolute;
+  top: -2px;
+  width: 64px;
+  height: 30px;
+}
+.header h1 a img {
+  width: 100%;
+}
+.header .Tabs_AppHeader_Tabs {
+  position: absolute;
+  left: 100px;
+  width: 270px;
+  height: 52px;
+}
+.header .Tabs_AppHeader_Tabs li {
+  float: left;
+  height: 52px;
+  padding: 0 15px;
+}
+.header .Tabs_AppHeader_Tabs li a {
+  font-size: 15px;
+  color: #8590a6;
+  padding: 14px 0;
+}
+.header ul li:nth-child(1) a {
+  border-bottom: 2px solid #0066ff;
+}
+/* 提问框 */
+.css_1acwmmj {
+  /* display: none; */
+  position: absolute;
+  top: 10px;
+  left: 430px;
+  width: 574px;
+  height: 34px;
+}
+.SearchBar_input {
+  background-color: #f6f6f6;
+  width: 400px;
+  height: 34px;
+  padding: 0 0 4px 16px;
+  border-radius: 17px;
+}
+.SearchBar_input input {
+  position: absolute;
+  top: 5px;
+  width: 326px;
+  height: 24px;
+  background-color: #f6f6f6;
+}
+.SearchBar_input button {
+  position: absolute;
+  left: 345px;
+  background-color: #f6f6f6;
+  width: 40px;
+  height: 34px;
+}
+.SearchBar_input button img {
+  width: 18px;
+  height: 18px;
+}
+.css_1acwmmj .Button {
+  position: absolute;
+  top: 0;
+  left: 420px;
+  width: 70px;
+  height: 34px;
+  color: #ffffff;
+  background-color: #0066ff;
+  border-radius: 17px;
+  font-size: 14px;
+}
+/* 焦点提问框 */
+.SearchBar_input_focus {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 430px;
+  width: 482px;
+  height: 34px;
+  padding: 0 0 4px 16px;
+  border: 2px solid #ccc;
+  border-radius: 17px;
+}
+.SearchBar_input_focus input {
+  position: absolute;
+  top: 3px;
+  width: 408px;
+  height: 24px;
+}
+.SearchBar_input_focus button {
+  position: absolute;
+  top: 3px;
+  left: 423px;
+  background-color: #fff;
+  width: 40px;
+  height: 24px;
+}
+.SearchBar_input_focus button img {
+  width: 18px;
+  height: 18px;
+}
+/* 用户信息 */
+.AppHeader_userInfo {
+  position: absolute;
+  left: 1000px;
+  top: 10px;
+  width: 154px;
+  height: 34px;
+}
+.Popover {
+  position: absolute;
+  top: 7px;
+  left: 4px;
+  width: 62px;
+  height: 22px;
+}
+.Popover img {
+  position: absolute;
+  width: 23px;
+  height: 22px;
+}
+.Popovertwo {
+  position: absolute;
+  top: 7px;
+  left: 66px;
+  width: 62px;
+  height: 22px;
+}
+.Popovertwo img {
+  position: absolute;
+  width: 23px;
+  height: 22px;
+}
+.AppHeader_profile {
+  position: absolute;
+  left: 124px;
+  width: 30px;
+  height: 30px;
+}
+.AppHeader_profile img {
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  width: 30px;
+  height: 30px;
+}
+.Menu {
+  position: absolute;
+  top: 38px;
+  left: 8px;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-color: #fff;
+}
+.Menu_item {
+  position: absolute;
+  top: 52px;
+  left: -46px;
+  width: 126px;
+  height: 156px;
+  padding: 6px 0;
+  background-color: #fff;
+}
+.Menu_item li {
+  position: relative;
+  float: left;
+  width: 126px;
+  height: 36px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 36px;
+  color: #8590a6;
+  padding: 0 20px;
+}
+.Menu_item li img {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 10px;
+  left: 15px;
+  margin-right: 6px;
+}
+/* 距离顶部模块 */
+.ProfileMain_headerfack {
+  display: none;
+  position: fixed;
+  width: 694px;
+  height: 51px;
+  border-bottom: 1px solid #f6f6f6;
+}
+.tablistfack {
+  position: absolute;
+  left: 170px;
+  width: 694px;
+  height: 51px;
+}
+.tablistfack li {
+  cursor: pointer;
+  float: left;
+  width: 56px;
+  height: 51px;
+  line-height: 51px;
+  font-size: 16px;
+  color: #121212;
+  padding: 0 12px;
+}
+.tablistfack li:nth-child(1) {
+  border-bottom: 2px solid #0066ff;
+}
+/* 头像模块 */
+.Card {
+  position: relative;
+  width: 1000px;
+  height: 253px;
+  margin: 10px auto;
+  background-color: #fff;
+}
+.UserAvatar {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 168px;
+  height: 168px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+.UserAvatar img {
+  width: 160px;
+  height: 160px;
+}
+.ProfileHeader_content {
+  position: absolute;
+  top: 40px;
+  left: 190px;
+  width: 760px;
+  height: 97px;
+  background-color: #fff;
+}
+.ProfileHeader_name {
+  color: #121212;
+  font-size: 26px;
+}
+.ProfileHeader_contentFooter {
+  width: 760px;
+  height: 32px;
+  padding-top: 8px;
+  line-height: 32px;
+}
+.Button {
+  width: 112px;
+  height: 24px;
+  color: #8590a6;
+  font-size: 14px;
+  background-color: #fff;
+}
+.Button::before {
+  font-family: "icomoon";
+  content: "\e91e";
+  font-size: 14px;
+  color: #8590a6;
+}
+.Button_blue {
+  float: right;
+  width: 118px;
+  height: 34px;
+  padding: 0 16px;
+  color: #0066ff;
+  border: 1px solid #0066ff;
+  background-color: #fff;
+}
+/* 主体模块 */
+.frame {
+  width: 1000px;
+  margin: 10px auto;
+  background-color: #f6f6f6;
+}
+.Profile_mainColumn {
+  width: 694px;
+  background-color: #fff;
+}
+.ProfileMain_header {
+  width: 694px;
+  height: 51px;
+  border-bottom: 1px solid #f6f6f6;
+}
+.tablist {
+  width: 694px;
+  height: 51px;
+}
+.tablist li {
+  cursor: pointer;
+  float: left;
+  width: 56px;
+  height: 51px;
+  line-height: 51px;
+  font-size: 16px;
+  color: #121212;
+  padding: 0 12px;
+}
+.tablist li:nth-child(1) {
+  border-bottom: 2px solid #0066ff;
+}
+.List_header {
+  width: 694px;
+  height: 50px;
+  background-color: #fff;
+  padding: 0 20px;
+  line-height: 50px;
+  border-bottom: 1px solid #f6f6f6;
+}
+.List_header span {
+  color: #121212;
+  font-weight: 700;
+  font-size: 15px;
+}
+.Card_TopstoryItem {
+  /* display: none; */
+  width: 694px;
+}
+.List_item {
+  width: 694px;
+  padding: 20px;
+  border-bottom: 1px solid #f6f6f6;
+  background-color: #fff;
+}
+.ContentItem_title {
+  color: #121212;
+}
+.RichContent_inner {
+  margin: 9px 0 -4px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #121212;
+}
+.Topstory_follow {
+  display: none;
+  width: 694px;
+  padding-bottom: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #f6f6f6;
+}
+.Topstory_follow img {
+  width: 144px;
+  height: 144px;
+  margin: 5px 275px 0;
+  text-align: center;
+}
+.Topstory_newUserFollowCountPanelText {
+  color: #808080;
+  font-size: 15px;
+  text-align: center;
+}

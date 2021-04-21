@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>知乎- 有问题，就会有答案</title>
+  <!-- 网址说明 -->
+  <meta name="description"
+    content="知乎，中文互联网最大的问答社区和创作者聚集的原创内容平台，于 2011 年 1 月正式上线，以「让人们更好地分享知识、经验和见解，找到自己的解答」为品牌使命。知乎凭借认真、专业、友善的社区氛围、独特的产品机制以及结构化和易获得的优质内容，聚集了中文互联网科技、商业、影视、时尚、文化等领域最具创造力的人群，已成为综合性、全品类、在诸多领域具有关键影响力的知识分享社区和创作者聚集的原创内容平台，建立起了以社区驱动的内容变现商业模式。" />
+  <!-- 关键字 -->
+  <meta name="keywords" content="任何问题 上知乎 就会有答案" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <!-- 引入基础样式 -->
+  <link rel="stylesheet" href="css/base.css" />
+  <!-- 引入登录页面样式 -->
+  <link rel="stylesheet" href="css/login.css" />
+  <!-- 引入jq封装 -->
+  <script src="js/jquery.min.js"></script>
+  <!-- 引入ajax函数 -->
+  <script src="js/ajax.js"></script>
+  <!-- 引入登录页面的js -->
+  <script src="js/login.js"></script>
+</head>
+
+<body>
+  <!-- head 头部模块 制作start -->
+  <div class="head">
+    <!-- 知乎Logo -->
+    <h1>
+      <a href="login.html">
+        <img src="images/logo.png" alt="" />
+      </a>
+    </h1>
+  </div>
+  <!-- head 头部模块 制作end -->
+
+  <!-- main 模块 start -->
+  <div class="main">
+    <div class="SignFlow">
+      <!-- tab 导航栏 -->
+      <div class="SignFlow_tabs">
+        <div class="SignFlow_tabs_activ">
+          <a href="javascript:;">免密码登录</a>
+        </div>
+        <div class="SignFlow_tab"><a href="javascript:;">密码登录</a></div>
+      </div>
+      <!-- account 账号 start-->
+      <div class="SignFlow_account">
+        <select name="" id="SignFlow_account_select">
+          <option value="">中国+86</option>
+          <option value="">美国+1</option>
+          <option value="">日本+81</option>
+          <option value="">中国香港+852</option>
+          <option value="">中国澳门+853</option>
+          <option value="">中国台湾+886</option>
+        </select>
+        <span class="SignFlow_accountseperator"></span>
+        <input type="text" placeholder="请输入手机号" />
+        <div class="SignFlowInput_errorMask">请输入正确的手机号</div>
+      </div>
+      <!-- 密码登录 -->
+      <div class="SignFlowInput_Mask">
+        <input type="text" placeholder="请输入手机号或邮箱" />
+      </div>
+      <!-- account 账号 end-->
+
+      <!-- 短信验证 -->
+      <div class="SignFlow_smsInputContainer">
+        <input type="text" placeholder="输入6位短信验证码" />
+        <div class="SignFlow_smsInputErrorMessage">验证码填写错误</div>
+        <button>获取短信信息</button>
+      </div>
+      <!-- 密码 -->
+      <div class="SignFlow_password">
+        <input type="text" placeholder="请输入密码" />
+        <button><img src="images/yang.png" alt="" /></button>
+        <div class="SignFlow_passwordErrorMessage">账号或密码错误</div>
+      </div>
+      <!-- 语音验证 -->
+      <div class="Login_options">
+        <button>接受语音验证码</button>
+      </div>
+      <div class="Login_option">
+        <span>海外手机号登录</span>
+        <button>忘记密码？</button>
+      </div>
+      <!-- sumbit 提交 -->
+      <button class="SignFlow_sumbit">注册/登录</button>
+      <!-- tip 小提示 -->
+      <div class="SignContainer_tip">
+        未注册手机验证后自动登录，注册即代表同意
+        <a href="https://www.zhihu.com/term/zhihu-terms" target="_blank">《知乎协议》</a>
+        <a href="https://www.zhihu.com/term/privacy" target="_blank" class="last">《隐私保护指引》</a>
+      </div>
+    </div>
+    <form class="SignFlow_setting">
+      <div class="SignFlow_back">返回</div>
+      <div class="SignFlow_settingTitle">设置用户名和密码</div>
+      <div class="SignFlow_Name">
+        <input type="text" placeholder="请输入用户名" />
+      </div>
+      <div class="SignFlow_passwordfack">
+        <input type="text" placeholder="请输入密码" />
+        <div><img src="images/yang.png" alt="" /></div>
+      </div>
+      <button class="SignFlow_sumbitfack">进入知乎</button>
+    </form>
+    <!-- sociallogin  社交帐号 -->
+    <div class="SignFlow_social">
+      <span>社交账号登录</span>
+      <ul>
+        <li><img src="images/weixin.png" alt="" />微信</li>
+        <li><img src="images/qq.png" alt="" />QQ</li>
+        <li><img src="images/weibo.png" alt="" />微博</li>
+      </ul>
+    </div>
+    <!-- 知乎的下载官网 -->
+    <div class="css_1k01q48">
+      <div class="css_1pysja1">
+        <img src="images/gou.png" alt="" />
+        <a href="https://www.zhihu.com/org/signup" target="_blank">开通机构号</a>
+      </div>
+      <div class="css_eow14e">
+        <img src="images/zhihu.png" alt="" />
+        <a href="/org/signup" target="_blank">下载知乎 APP</a>
+      </div>
+    </div>
+  </div>
+  <!-- main 模块 end -->
+  <!-- footer 底部模块start -->
+  <footer class="SignFlow_footer">
+    <div class="zhihulink">
+      <a href="https://zhuanlan.zhihu.com" target="_blank">知乎专栏</a>
+      <a href="https://www.zhihu.com/roundtable" target="_blank">圆桌</a>
+      <a href="https://www.zhihu.com/explore" target="_blank">发现</a>
+      <a href="https://www.zhihu.com/app/" target="_blank">移动应用</a>
+      <a href="https://www.zhihu.com/contact" target="_blank">联系我们</a>
+      <a href="https://app.mokahr.com/apply/zhihu/3819#/" target="_blank">来知乎工作</a>
+      <a href="https://www.zhihu.com/org/signup" target="_blank">注册机构号</a>
+    </div>
+    <div class="zhihuright">
+      <span>2021知乎</span>
+      <a href="https://tsm.miit.gov.cn/dxxzsp/" target="_blank">京 ICP 证 110745 号</a>
+      <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">京 ICP 备 13052560 号 - 1</a>
+      <img src="images/jingcha.png" alt="" />
+      <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020088" target="_blank">京公网安备
+        11010802020088 号</a>
+      <a href="https://zhstatic.zhihu.com/assets/zhihu/publish-license.jpg" target="_blank">出版物经营许可证</a>
+      <span>互联网药品信息服务资格证书（京）- 非经营性 - 2017 - 0067</span>
+    </div>
+    <div class="zhihuReports">
+      <a href="https://zhuanlan.zhihu.com/p/28852607" target="_blank">侵权举报</a>
+      <a href="https://www.12377.cn" target="_blank">网上有害信息举报专区</a>
+      <a href="https://www.zhihu.com/term/child-jubao" target="_blank">儿童色情信息举报专区</a>
+      <span>违法和不良信息举报：010-82716601</span>
+    </div>
+  </footer>
+  <!-- footer 底部模块end -->
+</body>
+
+</html>
