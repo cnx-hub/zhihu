@@ -7,24 +7,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="js/jquery.min.js"></script>
+  <script src="js/ajax.js"></script>
   <style>
     body {
       height: 2000px;
     }
 
     div {
-      display: block;
       margin: 10px;
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      word-break: break-all;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+
     }
   </style>
 </head>
 
 <body>
-  <button>提交</button>
+  <div>
+    12366666661236666666123666666612366666661236666666123666666612366666661236666666123666666612366666661236666666123666666612366666661236666666
+  </div>
   <script>
-    $(function () {
-      $("button").prop("disabled", true);
-    })
+
   </script>
 </body>
 

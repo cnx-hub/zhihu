@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="24a816b2-ef5a-4967-9b58-7b511368c814" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/question.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/question.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/personal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/personal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personal.html" beforeDir="false" afterPath="$PROJECT_DIR$/personal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/question.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text.html" beforeDir="false" afterPath="$PROJECT_DIR$/text.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1xxR5bQtZN4dUm0gYlfqhMw1bKn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="24a816b2-ef5a-4967-9b58-7b511368c814" name="默认的" comment="" />
+      <created>1631294575722</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1631294575722</updated>
+      <workItem from="1631294577563" duration="3000" />
+    </task>
+    <servers />
+  </component>
+</project>

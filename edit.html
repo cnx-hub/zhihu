@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑个人资料 - 知乎</title>
+    <!-- 网址说明 -->
+    <meta name="description"
+        content="知乎，中文互联网最大的问答社区和创作者聚集的原创内容平台，于 2011 年 1 月正式上线，以「让人们更好地分享知识、经验和见解，找到自己的解答」为品牌使命。知乎凭借认真、专业、友善的社区氛围、独特的产品机制以及结构化和易获得的优质内容，聚集了中文互联网科技、商业、影视、时尚、文化等领域最具创造力的人群，已成为综合性、全品类、在诸多领域具有关键影响力的知识分享社区和创作者聚集的原创内容平台，建立起了以社区驱动的内容变现商业模式。" />
+    <!-- 关键字 -->
+    <meta name="keywords" content="任何问题 上知乎 就会有答案" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- 引入公共样式 -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入自身的样式 -->
+    <link rel="stylesheet" href="css/edit.css">
+    <!-- 引入ajax -->
+    <script src="js/ajax.js"></script>
+    <!-- 引入jq -->
+    <script src="js/jquery.min.js"></script>
+    <!-- 引入自身js -->
+    <script src="js/edit.js"></script>
+</head>
+
+<body>
+    <!-- 顶部导航栏模块start -->
+    <div class="base">
+        <div class="root">
+            <header class="header">
+                <!-- 知乎logo链接 -->
+                <h1>
+                    <a href="index.html"><img src="images/logo1.png" alt=""></a>
+                </h1>
+                <!-- 导航模块 -->
+                <ul class="AppHeader_Tabs">
+                    <li class="AppHeader_Tab"><a href="">首页</a></li>
+                    <li class="AppHeader_Tab"><a href="">首页</a></li>
+                    <li class="AppHeader_Tab"><a href="">首页</a></li>
+                    <li class="AppHeader_Tab"><a href="" class="Tabs_link">等你来答</a></li>
+                </ul>
+                <!-- 搜索框模块 -->
+                <div class="css_1acwmmj">
+                    <div class="SearchBar_input">
+                        <input type="text" placeholder="情人节要怎么过？" />
+                        <button><img src="images/search.png" alt="" /></button>
+                    </div>
+                    <button class="Button">提问</button>
+                </div>
+                <!-- 焦点查询框 -->
+                <div class="SearchBar_input_focus">
+                    <input type="text" placeholder="情人节要怎么过？" />
+                    <button><img src="images/search.png" alt="" /></button>
+                </div>
+                <!-- 用户信息 -->
+                <div class="AppHeader_userInfo">
+                    <div class="Popover"><img src="images/dang.png" alt=""></div>
+                    <div class="Popovertwo"><img src="images/message.png" alt=""></div>
+                    <div class="AppHeader_profile">
+                        <img src="upload/portrait.png" alt="">
+                        <span class="Menu" style="display: none;"></span>
+                        <ul class="Menu_item" style="display: none;">
+                            <li><img src="upload/portrait.png" alt="" />我的主页</li>
+                            <li><img src="upload/creat .png" alt="" />创作中心</li>
+                            <li><img src="upload/set.png" alt="" />设置</li>
+                            <li><img src="upload/signout.png" alt="" />退出</li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+    <!-- 顶部导航栏模块end -->
+
+    <!-- 主体内容start -->
+    <div class="ProfileEdit">
+        <div class="ProfileHeader_content">
+            <div class="ProfileHeader_contentHead">
+                <h1 class="ProfileHeader_title">
+                    <span>未知</span>
+                    <button class="Field_button" style="display: none;"><img src="images/counlm.png" alt="">修改</button>
+                </h1>
+                <a href="javascript:;">返回我的主页</a>
+            </div>
+            <div class="ProfileEdit_fields">
+                <form class="Field">
+                    <h3 class="Field_label">性别</h3>
+                    <div class="Field_content">
+                        <span id="sex">未知</span>
+                        <button class="Field_button" style="display: none;"><img src="images/counlm.png" alt="">修改
+                        </button>
+                    </div>
+                </form>
+                <form class="Field">
+                    <h3 class="Field_label">年龄</h3>
+                    <div class="Field_content">
+                        <span id="age">未知</span>
+                        <button class="Field_button" style="display: none;"><img src="images/counlm.png" alt="">修改
+                        </button>
+                    </div>
+                </form>
+                <form class="Field">
+                    <h3 class="Field_label">爱好</h3>
+                    <div class="Field_content">
+                        <span id="hobby">未知</span>
+                        <button class="Field_button" style="display: none;"><img src="images/counlm.png" alt="">修改
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 主体内容end -->
+
+</body>
+
+</html>

@@ -41,9 +41,6 @@ $(function () {
         })
     })
     // 距离顶部模块
-    var ProfileMain_header = document.querySelector(".ProfileMain_header");
-    var ProfileMain_headerfack = document.querySelector(".ProfileMain_headerfack");
-    var header = document.querySelector(".header");
     $(document).on("scroll", function () {
         if ($(this).scrollTop() >= $(".ProfileMain_header").offset().top) {
             $(".ProfileMain_headerfack").slideDown();
@@ -53,4 +50,25 @@ $(function () {
             $(".header").slideDown();
         }
     });
+    // 编辑跳转到个人信息
+    $(".Button_blue").on("click", function () {
+        window.location.assign("file:///D:/web%E5%89%8D%E7%AB%AF/%E7%BA%A2%E5%B2%A9%E4%BD%9C%E4%B8%9A/%E7%9F%A5%E4%B9%8E/edit.html");
+    })
+    // 获取个人信息
+    ajax({
+        type: "get",
+        url: "http://159.75.14.159:8080/ZhiHu/user",
+        data: {
+            Authorization: localStorage.getItem("token")
+        },
+        success: function (data) {
+            console.log(data);
+            $(".ProfileHeader_name").text(data.user.Username);
+            localStorage.setItem("telephone", data.user.Telephone);
+        },
+        error: function (data) {
+            console.log(data);
+        }
+    });
+
 })

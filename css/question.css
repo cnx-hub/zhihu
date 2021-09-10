@@ -1,7 +1,7 @@
 /* body设置 */
 body {
   background-color: #f6f6f6;
-  height: 3000px;
+  /* height: 3000px; */
 }
 @font-face {
   font-family: "icomoon";
@@ -21,6 +21,7 @@ body {
 }
 .root{
   position: fixed;
+  z-index: 2;
   height: 52px;
   width: 100%;
   background-color: #ffffff;
@@ -107,6 +108,36 @@ height: 34px;
     border-radius: 17px;
     color: #ffffff;
 }
+/* 焦点提问框 */
+.SearchBar_input_focus {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 600px;
+  width: 482px;
+  height: 34px;
+  padding: 0 0 4px 16px;
+  border: 2px solid #ccc;
+  border-radius: 17px;
+}
+.SearchBar_input_focus input {
+  position: absolute;
+  top: 3px;
+  width: 408px;
+  height: 24px;
+}
+.SearchBar_input_focus button {
+  position: absolute;
+  top: 3px;
+  left: 423px;
+  background-color: #fff;
+  width: 40px;
+  height: 24px;
+}
+.SearchBar_input_focus button img {
+  width: 18px;
+  height: 18px;
+}
 .AppHeader_userInfo{
     position: absolute;
     right: 190px;
@@ -172,6 +203,7 @@ height: 34px;
   margin: 10px auto;
   padding: 0 8px;
   overflow: hidden;
+  /* z-index: -999; */
 }
 /* 内容模块 */
 .Topstory_mainColumnCard {
@@ -194,6 +226,7 @@ height: 34px;
 }
 .TopstoryTabs ul li {
     float: left;
+    cursor:pointer;
     width: 122px;
     height: 32px;
     line-height: 32px;
@@ -211,6 +244,9 @@ height: 34px;
 .TopstoryTabs ul li a {
     color: #444;
     font-size: 14px;
+}
+.QuestionType_active {
+  color: #0066ff!important;
 }
 /* 主体内容模块 */
 .ListShortcut {
@@ -241,6 +277,14 @@ height: 34px;
   left: 30px;
   color: #8590a6;
   font-size: 15px;
+}
+.css_efpzff a {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  color: #8590a6;
+  font-size: 20px;
+
 }
 .QuestionItem_title a {
   line-height: 1.6;

@@ -71,7 +71,7 @@ $(function () {
     var timeLeft = SEND_INTERVAL;
     $(".SignFlow_smsInputContainer button").on("click", function () {
         // // 判断手机号码是否符合正则表达式
-        var regExpression = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+        var regExpression = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(19[0-9]{1}))+\d{8})$/;
         if (!regExpression.test($(".SignFlow_account input").val())) {
             // 提示手机号码出错
             $(".SignFlowInput_errorMask").show();
@@ -84,10 +84,9 @@ $(function () {
         // 发送数据给服务器
         ajax({
             type: "get",
-            url: "http://sunsun.work:8000/ZhiHu/getSms",
+            url: "http://159.75.14.159:8080/ZhiHu/sms/signUp",
             data: {
                 Telephone: $(".SignFlow_account input").val(),
-                Test: "afhk8492",
             },
             success: function (data) {
                 console.log(data);
@@ -179,8 +178,8 @@ $(function () {
         // 进行验证码验证
         if (tab_flag == 0) {
             ajax({
-                type: "get",
-                url: "http://sunsun.work:8000/ZhiHu/checkSms",
+                type: "post",
+                url: "http://159.75.14.159:8080/ZhiHu/sms/signUp",
                 data: {
                     Telephone: $(".SignFlow_account input").val(),
                     VerCode: $(".SignFlow_smsInputContainer input").val(),
@@ -188,14 +187,13 @@ $(function () {
                 success: function (data) {
                     console.log(data);
                     if (data.message == "验证成功") {
-                        if (data.userState == 0) {
+                        if (data.userState == 10001) {
                             $(".SignFlow_setting").show();
                             $(".SignFlow").hide();
                         }
-                        if (data.userState == 10001) {
+                        if (data.userState == 10002) {
                             // 跳转到登录成功页面
-                            console.log(1);
-                            window.location.assign("file:///D:/web前端/红岩作业/知乎/index.html");
+                            window.location.assign("http://139.159.244.31/ZHIHU/index.html");
                         }
                     } else {
                         //短信验证错误提示
@@ -211,24 +209,25 @@ $(function () {
         else {
             ajax({
                 type: "post",
-                url: "http://sunsun.work:8000/ZhiHu/login",
+                url: "http://159.75.14.159:8080/ZhiHu/user/signIn",
                 data: {
-                    Name: $(".SignFlowInput_Mask input").val(),
+                    Username: $(".SignFlowInput_Mask input").val(),
                     Password: $(".SignFlow_password input").val(),
+                },
+                head: {
+                    Content_Type: "application/x-www-form-urlencoded"
                 },
                 success: function (data) {
                     console.log(data);
-                    if (data.message == "failure") {
-                        $(".SignFlow_passwordErrorMessage").show();
-                        $(".SignFlow_password btn").hide();
-                    } else {
-                        localStorage.setItem("keyId", data.keyId);
-                        location.assign("file:///D:/web前端/红岩作业/知乎/index.html");
+                    if (data.message == "登录成功") {
+                        localStorage.setItem("token", data.token);
+                        location.assign("http://139.159.244.31/ZHIHU/index.html");
                     }
                 },
                 error: function (data) {
+                    $(".SignFlow_passwordErrorMessage").show();
+                    $(".SignFlow_password btn").hide();
                     console.log(data);
-                    alert("调用失败");
                 }
             });
         }
@@ -277,27 +276,34 @@ $(function () {
         }
     });
     // 将新用户的用户信息传到服务器
-    $(".SignFlow_sumbitfack").on("click", function () {
+    $(".SignFlow_sumbitfack").on("click", function (e) {
+        e.preventDefault();
         ajax({
             type: "post",
-            url: "http://sunsun.work:8000/ZhiHu/register",
+            url: "http://159.75.14.159:8080/ZhiHu/user/signUp",
             data: {
                 Username: $(".SignFlow_Name input").val(),
                 Password: $(".SignFlow_passwordfack input").val(),
-                Telephone: $(".SignFlow_account input").val()
+                Telephone: $(".SignFlow_account input").val(),
+                Gender: "man",
+                Age: 20
             },
             head: {
                 Content_Type: "application/x-www-form-urlencoded"
             },
             success: function (data) {
                 console.log(data);
-                location.assign("file:///D:/web前端/红岩作业/知乎/index.html");
+                localStorage.setItem("token", data.token);
+                location.assign("file:///D:/web%E5%89%8D%E7%AB%AF/%E7%BA%A2%E5%B2%A9%E4%BD%9C%E4%B8%9A/%E7%9F%A5%E4%B9%8E/index.html");
+            },
+            error: function (data) {
+                console.log(data);
             }
         });
 
     });
     // 要是重新打开页面直接跳转去在主页
-    if (localStorage.getItem("keyId")) {
-        location.assign("file:///D:/web前端/红岩作业/知乎/index.html");
+    if (localStorage.getItem("token")) {
+        location.assign("http://139.159.244.31/ZHIHU/index.html");
     };
 })

@@ -16,6 +16,12 @@
     <link rel="stylesheet" href="css/base.css">
     <!-- 引入自己的样式 -->
     <link rel="stylesheet" href="css/question.css">
+    <!-- 引入ajax -->
+    <script src="js/ajax.js"></script>
+    <!-- 引入jq -->
+    <script src="js/jquery.min.js"></script>
+    <!-- 引入question.js文件 -->
+    <script src="js/question.js"></script>
 </head>
 
 <body>
@@ -30,8 +36,8 @@
                 <!-- 导航模块 -->
                 <ul class="AppHeader_Tabs">
                     <li class="AppHeader_Tab"><a href="">首页</a></li>
-                    <li class="AppHeader_Tab"><a href="">首页</a></li>
-                    <li class="AppHeader_Tab"><a href="">首页</a></li>
+                    <li class="AppHeader_Tab"><a href="">会员</a></li>
+                    <li class="AppHeader_Tab"><a href="">发现</a></li>
                     <li class="AppHeader_Tab"><a href="" class="Tabs_link">等你来答</a></li>
                 </ul>
                 <!-- 搜索框模块 -->
@@ -42,6 +48,12 @@
                     </div>
                     <button class="Button">提问</button>
                 </div>
+                <!-- 焦点查询框 -->
+                <div class="SearchBar_input_focus">
+                    <input type="text" placeholder="情人节要怎么过？" />
+                    <button><img src="images/search.png" alt="" /></button>
+                </div>
+                <!-- 用户信息 -->
                 <div class="AppHeader_userInfo">
                     <div class="Popover"><img src="images/dang.png" alt=""></div>
                     <div class="Popovertwo"><img src="images/message.png" alt=""></div>
@@ -63,14 +75,13 @@
 
     <!-- 主体模块start -->
     <div class="Topstory_container">
-
         <div class="Topstory_mainColumnCard">
             <!-- 内容导航栏 -->
             <div class="TopstoryTabs">
                 <ul>
                     <li>
                         <img src="images/star.png" alt="">
-                        <a href="javascript:;">为你推荐</a>
+                        <a href="javascript:;" class="QuestionType_active">为你推荐</a>
                     </li>
                     <li>
                         <img src="images/recommend.png" alt="">
@@ -88,10 +99,11 @@
             </div>
             <!-- 内容模块start -->
             <div class="ListShortcut">
-                <div class="QuestionItem">
+                <!-- <div class="QuestionItem">
                     <div class="css_efpzff">
                         <img src="upload/hot.png" alt="">
-                        <div class="QuestionItem_head">最近有1422人搜过</div>
+                        <div class="QuestionItem_head">最近有1422人搜过 </div>
+                        <a href="javascript:;" title="不感兴趣" class="close" style="display: none;">×</a>
                     </div>
                     <div class="QuestionItem_title">
                         <a href="javascript:;" target="_blank">陌生人 可以推荐我一首歌？</a>
@@ -104,6 +116,23 @@
                         </div>
                     </div>
                 </div>
+                <div class="QuestionItem">
+                    <div class="css_efpzff">
+                        <img src="upload/hot.png" alt="">
+                        <div class="QuestionItem_head">最近有1422人搜过 </div>
+                        <a href="javascript:;" title="不感兴趣" class="close" style="display: none;">×</a>
+                    </div>
+                    <div class="QuestionItem_title">
+                        <a href="javascript:;" target="_blank">陌生人 可以推荐我一首歌？</a>
+                    </div>
+                    <div class="css_g8i27r">
+                        <button class="Button_withLabel"> <img src="images/pen.png" alt=""> 写回答</button>
+                        <div class="ContentItem_status">
+                            <span class="ContentItem_statusItem">1035回答</span>
+                            <span class="ContentItem_statusItem">·1078关注</span>
+                        </div>
+                    </div>
+                </div> -->
             </div>
             <!-- 内容模块end -->
         </div>

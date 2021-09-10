@@ -9,8 +9,6 @@ $(function () {
         $(this).parents(".SearchBar_input_focus").fadeOut(300).siblings(".css_1acwmmj").fadeIn(300);
     });
     // 滑动头部改变
-    var TopstoryTabs = document.querySelector(".TopstoryTabs");
-    var TopstoryTabs_ul = TopstoryTabs.children[0];//内容导航栏
     $(document).on("scroll", function () {
         if ($(this).scrollTop() >= $(".Topstory_container").offset().top) {
             $(".TopstoryPageHeader").slideDown();
@@ -20,152 +18,28 @@ $(function () {
             $(".header").slideDown();
         }
     });
+    // 导航栏
     // 点击内容导航栏模块 颜色加深
     $(".TopstoryTabs ul li, .TopstoryTabsfack ul li").on("click", function () {
         $(this).children().css("color", "#0066ff").parent().siblings().children().css("color", "#121212");
     });
-    var ListShortcut = document.querySelector(".ListShortcut");//将从服务器端拿到的内容都放在里面
-    var Topstory_follow = document.querySelector(".Topstory_follow");
-    var HotList_list = document.querySelector(".HotList_list");
-    // TopstoryTabs_ul.children[0].addEventListener("click", function () {
-    //     clearInterval(timer2)
-    //     timer1 = window.setInterval(function () {
-    //         ajax({
-    //             type: "get",
-    //             url: "http://sunsun.work:8000/ZhiHu/article/any",
-    //             success: function (data) {
-    //                 console.log(data);
-    //                 var Card_TopstoryItem = document.createElement("div");
-    //                 Card_TopstoryItem.classList.add("Card_TopstoryItem");
-    //                 ListShortcut.appendChild(Card_TopstoryItem);
-    //                 var ContentItem_title = document.createElement("h2");
-    //                 ContentItem_title.classList.add("ContentItem_title");
-    //                 ContentItem_title.innerHTML = data.ArticleTitle;
-    //                 Card_TopstoryItem.appendChild(ContentItem_title);
-    //                 var RichContent_inner = document.createElement("div");
-    //                 RichContent_inner.classList.add("RichContent_inner");
-    //                 RichContent_inner.innerHTML = data.ArticleBody;
-    //                 Card_TopstoryItem.appendChild(RichContent_inner);
-    //                 var ContentItem_actions = document.createElement("div");
-    //                 ContentItem_actions.classList.add("ContentItem_actions");
-    //                 Card_TopstoryItem.appendChild(ContentItem_actions);
-    //                 var VoteButton_up = document.createElement("div");
-    //                 VoteButton_up.classList.add("VoteButton_up");
-    //                 ContentItem_actions.appendChild(VoteButton_up);
-    //                 var up = document.createElement("span");
-    //                 up.classList.add("up");
-    //                 VoteButton_up.appendChild(up);
-    //                 var span = document.createElement("span");
-    //                 span.innerHTML = "赞同";
-    //                 VoteButton_up.appendChild(span);
-    //                 var VoteButton_down = document.createElement("div");
-    //                 VoteButton_down.classList.add("VoteButton_down");
-    //                 ContentItem_actions.appendChild(VoteButton_down);
-    //                 var down = document.createElement("down");
-    //                 down.classList.add("down");
-    //                 VoteButton_down.appendChild(down);
-    //                 var button_plan = document.createElement("ul");
-    //                 button_plan.classList.add("button_plan");
-    //                 ContentItem_actions.appendChild(button_plan);
-    //                 for (var i = 0; i < 4; i++) {
-    //                     var comment = document.createElement("li");
-    //                     comment.classList.add("comment");
-    //                     button_plan.appendChild(comment);
-    //                     var comment_img = document.createElement("img");
-    //                     comment_img.src = "images/" + i + ".png";
-    //                     comment_img.classList.add("comment_img");
-    //                     comment.appendChild(comment_img);
-    //                     var span = document.createElement("span");
-    //                     if (i == 0) {
-    //                         span.innerHTML = "评论";
-    //                     }
-    //                     else if (i == 1) {
-    //                         span.innerHTML = "分享";
-    //                     } else if (i == 2) {
-    //                         span.innerHTML = "收藏";
-    //                         comment.addEventListener("click", function () {
-    //                             alert("已经收藏");
-    //                             artId.push(data.ArticleId);
-    //                             localStorage.setItem("ArticleId", JSON.stringify(artId));
-    //                             ajax({
-    //                                 type: "post",
-    //                                 url: "http://sunsun.work:8000/ZhiHu/article/collection",
-    //                                 data: {
-    //                                     keyId: localStorage.getItem("localStorage"),
-    //                                     artId: data.ArticleId,
-    //                                 },
-    //                                 head: {
-    //                                     Content_Type: "application/x-www-form-urlencoded",
-    //                                 },
-    //                                 success: function (data) {
-    //                                     console.log(data);
-    //                                 },
-    //                                 error: function (data) {
-    //                                     console.log(data);
-    //                                     alert("调用失败");
-    //                                 }
-    //                             });
-    //                         });
-    //                     } else if (i == 3) {
-    //                         span.innerHTML = "举报";
-    //                     }
-    //                     comment.appendChild(span);
-    //                 }
-    //             },
-    //             error: function (data) {
-    //                 console.log(data);
-    //                 alert("调用失败");
-    //             }
-    //         });
-    //     }, 200);
-    //     ListShortcut.style.display = "block";
-    //     Topstory_follow.style.display = "none";
-    //     HotList_list.style.display = "none";
-    // });
-    // TopstoryTabs_ul.children[1].addEventListener("click", function () {
-    //     // window.clearInterval(timer1);
-    //     window.clearInterval(timer2);
-    //     ListShortcut.style.display = "none";
-    //     Topstory_follow.style.display = "block";
-    //     HotList_list.style.display = "none";
-    // });
-    // TopstoryTabs_ul.children[2].addEventListener("click", function () {
-    //     window.clearInterval(timer1);
-    //     timer2 = setInterval(function () {
-    //         ajax({
-    //             type: "get",
-    //             url: "http://sunsun.work:8000/ZhiHu/article/any",
-    //             success: function (data) {
-    //                 var HotItem = document.createElement("div");
-    //                 HotItem.classList.add("HotItem");
-    //                 HotList_list.appendChild(HotItem);
-    //                 var HotItem_index = document.createElement("div");
-    //                 HotItem_index.classList.add("HotItem_index");
-    //                 HotItem.appendChild(HotItem_index);
-    //                 var HotItem_rank = document.createElement("div");
-    //                 HotItem_rank.classList.add("HotItem_rank");
-    //                 HotItem_index.appendChild(HotItem_rank);
-    //                 var HotItem_title = document.createElement("h2");
-    //                 HotItem_title.classList.add("HotItem_title");
-    //                 HotItem_title.innerHTML = data.ArticleTitle;
-    //                 HotItem.appendChild(HotItem_title);
-    //                 var HotItem_excerpt = document.createElement("p");
-    //                 HotItem_excerpt.classList.add("HotItem_excerpt");
-    //                 HotItem_excerpt.innerHTML = data.ArticleBody;
-    //                 HotItem.appendChild(HotItem_excerpt);
-    //             },
-    //             error: function (data) {
-    //                 console.log(data);
-    //                 alert("调用失败");
-    //             }
-    //         });
-    //     }, 1000);
-    //     ListShortcut.style.display = "none";
-    //     Topstory_follow.style.display = "none";
-    //     HotList_list.style.display = "block";
-    // });
+    $(".TopstoryTabs li:eq(0)").on("click", function () {
+        $(".ListShortcut").show();
+        $(".Topstory_follow").hide();
+        $(".HotList_list").hide();
+    })
+    $(".TopstoryTabs li:eq(1)").on("click", function () {
+        $(".ListShortcut").hide();
+        $(".Topstory_follow").show();
+        $(".HotList_list").hide();
+    })
+    $(".TopstoryTabs li:eq(2)").on("click", function () {
+        $(".ListShortcut").hide();
+        $(".Topstory_follow").hide();
+        $(".HotList_list").show();
+    })
+
     // 用户信息是否隐藏
-    var display_type;
     $(".AppHeader_profile img").on("click", function () {
         let display_type = $(".Menu").css("display");
         display_type = (display_type == "none") ? "block" : "none"
@@ -193,135 +67,87 @@ $(function () {
     });
     // 跳转到写文章页面
     $(".GlobalWrite_topItem:eq(2)").on("click", function () {
-        location.assign("file:///D:/web前端/红岩作业/知乎/article.html");
+        window.location.assign("http://139.159.244.31/ZHIHU/article.html");
     });
     // 跳转的个人信息页面
     $(".Menu_item li:eq(0),.Menu_itemfack li:eq(0)").on("click", function () {
-        window.location.assign("file:///D:/web前端/红岩作业/知乎/personal.html");
+        window.location.assign("http://139.159.244.31/ZHIHU/personal.html");
     });
     // 退出登录 删掉keyId
     $(".Menu_item li:eq(3), .Menu_itemfack li:eq(3)").on("click", function () {
-        localStorage.removeItem("keyId");
-        window.location.assign("file:///D:/web前端/红岩作业/知乎/login.html");
+        localStorage.removeItem("token");
+        localStorage.removeItem("telephone");
+        window.location.assign("http://139.159.244.31/ZHIHU/login.html");
     });
+    // 跳转到回答问题页面
+    $(".GlobalWrite_topItem:eq(0)").on("click", function () {
+        window.location.assign("http://139.159.244.31/ZHIHU/question.html");
+    })
     // 向服务器端请求内容
-    var artId = [];
-    // var timer1 = window.setInterval(function () {
-    //     ajax({
-    //         type: "get",
-    //         url: "http://sunsun.work:8000/ZhiHu/article/any",
-    //         success: function (data) {
-    //             console.log(data);
-    //             var Card_TopstoryItem = document.createElement("div");
-    //             Card_TopstoryItem.classList.add("Card_TopstoryItem");
-    //             ListShortcut.appendChild(Card_TopstoryItem);
-    //             var ContentItem_title = document.createElement("h2");
-    //             ContentItem_title.classList.add("ContentItem_title");
-    //             ContentItem_title.innerHTML = data.ArticleTitle;
-    //             Card_TopstoryItem.appendChild(ContentItem_title);
-    //             var RichContent_inner = document.createElement("div");
-    //             RichContent_inner.classList.add("RichContent_inner");
-    //             RichContent_inner.innerHTML = data.ArticleBody;
-    //             Card_TopstoryItem.appendChild(RichContent_inner);
-    //             var ContentItem_actions = document.createElement("div");
-    //             ContentItem_actions.classList.add("ContentItem_actions");
-    //             Card_TopstoryItem.appendChild(ContentItem_actions);
-    //             var VoteButton_up = document.createElement("div");
-    //             VoteButton_up.classList.add("VoteButton_up");
-    //             ContentItem_actions.appendChild(VoteButton_up);
-    //             var up = document.createElement("span");
-    //             up.classList.add("up");
-    //             VoteButton_up.appendChild(up);
-    //             var span = document.createElement("span");
-    //             span.innerHTML = "赞同";
-    //             VoteButton_up.appendChild(span);
-    //             var VoteButton_down = document.createElement("div");
-    //             VoteButton_down.classList.add("VoteButton_down");
-    //             ContentItem_actions.appendChild(VoteButton_down);
-    //             var down = document.createElement("down");
-    //             down.classList.add("down");
-    //             VoteButton_down.appendChild(down);
-    //             var button_plan = document.createElement("ul");
-    //             button_plan.classList.add("button_plan");
-    //             ContentItem_actions.appendChild(button_plan);
-    //             for (var i = 0; i < 4; i++) {
-    //                 var comment = document.createElement("li");
-    //                 comment.classList.add("comment");
-    //                 button_plan.appendChild(comment);
-    //                 var comment_img = document.createElement("img");
-    //                 comment_img.src = "images/" + i + ".png";
-    //                 comment_img.classList.add("comment_img");
-    //                 comment.appendChild(comment_img);
-    //                 var span = document.createElement("span");
-    //                 if (i == 0) {
-    //                     span.innerHTML = "评论";
-    //                 }
-    //                 else if (i == 1) {
-    //                     span.innerHTML = "分享";
-    //                 } else if (i == 2) {
-    //                     span.innerHTML = "收藏";
-    //                     comment.addEventListener("click", function () {
-    //                         alert("已经收藏");
-    //                         artId.push(data.ArticleId);
-    //                         localStorage.setItem("ArticleId", JSON.stringify(artId));
-    //                         // ajax({
-    //                         //     type: "post",
-    //                         //     url: "http://sunsun.work:8000/ZhiHu/article/collection",
-    //                         //     data: {
-    //                         //         keyId: localStorage.getItem("localStorage"),
-    //                         //         artId: data.ArticleId,
-    //                         //     },
-    //                         //     head: {
-    //                         //         Content_Type: "application/x-www-form-urlencoded",
-    //                         //     },
-    //                         //     success: function (data) {
-    //                         //         console.log(data);
-    //                         //     },
-    //                         //     error: function (data) {
-    //                         //         console.log(data);
-    //                         //         alert("调用失败");
-    //                         //     }
-    //                         // });
-    //                     });
-    //                 } else if (i == 3) {
-    //                     span.innerHTML = "举报";
-    //                 }
-    //                 comment.appendChild(span);
-    //             }
-    //         },
-    //         error: function (data) {
-    //             console.log(data);
-    //             alert("调用失败");
-    //         }
-    //     });
-    // }, 1000);
-    // var timer2 = setInterval(function () {
-    //     ajax({
-    //         type: "get",
-    //         url: "http://sunsun.work:8000/ZhiHu/article/any",
-    //         success: function (data) {
-    //             var HotItem = document.createElement("div");
-    //             HotItem.classList.add("HotItem");
-    //             HotList_list.appendChild(HotItem);
-    //             var HotItem_index = document.createElement("div");
-    //             HotItem_index.classList.add("HotItem_index");
-    //             HotItem.appendChild(HotItem_index);
-    //             var HotItem_rank = document.createElement("div");
-    //             HotItem_rank.classList.add("HotItem_rank");
-    //             HotItem_index.appendChild(HotItem_rank);
-    //             var HotItem_title = document.createElement("h2");
-    //             HotItem_title.classList.add("HotItem_title");
-    //             HotItem_title.innerHTML = data.ArticleTitle;
-    //             HotItem.appendChild(HotItem_title);
-    //             var HotItem_excerpt = document.createElement("p");
-    //             HotItem_excerpt.classList.add("HotItem_excerpt");
-    //             HotItem_excerpt.innerHTML = data.ArticleBody;
-    //             HotItem.appendChild(HotItem_excerpt);
-    //         },
-    //         error: function (data) {
-    //             console.log(data);
-    //             alert("调用失败");
-    //         }
-    //     });
-    // }, 1000);
+    let datas1 = new Array();
+    for (let i = 0; i < 500; i++) {
+        ajax({
+            type: "get",
+            url: "http://159.75.14.159:8080/ZhiHu/article",
+            data: {
+                Id: i % 11 + 3,
+            },
+            success: function (data) {
+                // console.log(i);
+                datas1.push(data);
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    }
+    setTimeout(() => {
+        datas1.forEach((value) => {
+            let add = `<div class="Card_TopstoryItem">
+          <h2 class="ContentItem_title">${value.article.ArtTitle}</h2>
+          <div class="RichContent">
+            <div class="RichContent_cover"><img src="upload/zhihu${value.article.Id - 2}.jpg" alt=""></div>
+            <div class="RichContent_inner">${value.article.ArtBody}</div>
+          </div>
+          <div class="ContentItem_actions">
+            <div class="VoteButton_up">
+              <span class="up"></span>
+              <span>赞同</span>
+            </div>
+            <div class="VoteButton_down">
+              <span class="down"></span>
+            </div>
+            <ul class="button_plan">
+              <li class="comment">
+                <img src="images/0.png" alt="" class="comment_img" />
+                <span>评论</span>
+              </li>
+              <li class="comment">
+                <img src="images/1.png" alt="" class="comment_img" /><span>分享</span>
+              </li>
+              <li class="comment">
+                <img src="images/2.png" alt="" class="comment_img" /><span>收藏</span>
+              </li>
+              <li class="comment">
+                <img src="images/3.png" alt="" class="comment_img" /><span>举报</span>
+              </li>
+            </ul>
+          </div>
+        </div>`;
+            $(".ListShortcut").append(add);
+        })
+    }, 2000)
+    setTimeout(() => {
+        datas1.forEach((value, i) => {
+            let add = `<div class="HotItem">
+          <div class="HotItem_index">
+            <div class="HotItem_rank">${i + 1}</div>
+          </div>
+          <h2 class="HotItem_title">${value.article.ArtTitle}</h2>
+          <div class="HotItem_excerpt">${value.article.ArtBody}</div>
+          <div class="HotItem_img"><img src="upload/zhihu${value.article.Id - 2}.jpg" alt=""></div>
+        </div>`
+            $(".HotList_list").append(add);
+        })
+    }, 2000)
 })
